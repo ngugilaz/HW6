@@ -56,7 +56,10 @@
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
-    
+    <a href="default.aspx">HOME</a>
+        <br />
+    <a href="Recipes.aspx">View Recipe</a>
+        <br />
     </div>
     </form>
 </body>
