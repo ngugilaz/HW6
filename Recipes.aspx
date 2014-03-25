@@ -23,7 +23,7 @@
                 <asp:BoundField DataField="reSubmit" HeaderText="Submitted by" SortExpression="reSubmit" />
                 <asp:BoundField DataField="reIng 1" HeaderText="Ingredient # 1" SortExpression="reIng 1" />
                 <asp:BoundField DataField="rePrep" HeaderText="Preparation" SortExpression="rePrep" />
-                <asp:HyperLinkField DataNavigateUrlFields="reID" DataNavigateUrlFormatString="recipedetails.aspx? reID={0}" Text="View Details" />
+                <asp:HyperLinkField DataNavigateUrlFields="reID" DataNavigateUrlFormatString="Recipedetails.aspx?reID={0}" Text="View Details" />
             </Columns>
         </asp:GridView>
         <br />
