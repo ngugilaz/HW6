@@ -12,9 +12,13 @@
     <div>
     
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CS-recipeWebsite %>" SelectCommand="SELECT * FROM [recipe]"></asp:SqlDataSource>
+
+         <a href="default.aspx">HOME</a> 
+        <br />
+        <a href="NewRecipe.aspx"> Add a new recipe</a>
+        <br />
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="reId" DataSourceID="SqlDataSource1">
             <Columns>
-                <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="reName" HeaderText="Recipe Name" SortExpression="reName" />
                 <asp:BoundField DataField="reSubmit" HeaderText="Submitted by" SortExpression="reSubmit" />
                 <asp:BoundField DataField="reIng 1" HeaderText="Ingredient # 1" SortExpression="reIng 1" />
@@ -23,7 +27,7 @@
             </Columns>
         </asp:GridView>
         <br />
-    <a href="default.aspx">HOME</a> <br />
+   
     </div>
     </form>
 </body>

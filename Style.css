@@ -6,3 +6,7 @@ h2 {text-align:center;
 }
 .deletedrecipehighlight {color:pink;font-style:italic;font-weight:bold;text-decoration:underline;
 }
+#container {background-color:#D2B48C; width:900px;margin: 0 auto;border:solid 2px black;
+}
+#content{background-color:coral;
+}

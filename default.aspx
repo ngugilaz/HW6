@@ -13,20 +13,25 @@
     <form id="form1" runat="server">
 
     <div>
-        <div>
-            <h1>Wicked Easy Recipes</h1>
-            <h2> Using 5 Ingredients or Less!</h2>
 
-        </div>
-       <div>
-         <a href="Recipes.aspx"> View Recipe</a>
-        <br />
-        <a href="NewRecipe.aspx">New Recipe</a>
-        <br />
-       </div>
-        <div>
-           
-        </div>
+        <div> id="Container">
+             <div>
+                <h1>Wicked Easy Recipes</h1>
+                <h2> Using 5 Ingredients or Less!</h2>
+             </div>
+                <div>
+                    <a href="./Recipes.aspx"> View all Recipes</a>
+                    <a href="./NewRecipe.aspx">Add a new recipe</a>
+                    <a href="">About Us</a>
+                    <a href="">Contact</a>
+               </div>
+                <br />
+                <div id="contents">
+
+                </div>
+
+                <div id="footer"> Footer </div>       
+           </div>
     </div>
     </form>
 </body>

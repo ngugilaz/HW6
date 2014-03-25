@@ -43,6 +43,10 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
+         <a href="default.aspx">HOME</a>
+        <br />
+         <a href="Recipes.aspx">View all Recipes</a>
+        <br />
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="reId" DataSourceID="SqlDataSource1" Height="50px" Width="392px">
             <Fields>
                 <asp:BoundField DataField="reName" HeaderText="Recipe Name" SortExpression="reName" />
@@ -54,12 +58,12 @@
                 <asp:BoundField DataField="reIng 5" HeaderText="Ingredient # 5" SortExpression="reIng 5" />
                 <asp:BoundField DataField="rePrep" HeaderText="Preparation" SortExpression="rePrep" />
                 <asp:BoundField DataField="reNotes" HeaderText="Notes" SortExpression="reNotes" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                <asp:CommandField ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
-    <a href="default.aspx">HOME</a>
         <br />
-    <a href="Recipes.aspx">View Recipe</a>
+
+   
         <br />
     </div>
     </form>
