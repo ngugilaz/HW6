@@ -54,7 +54,7 @@
                 <asp:BoundField DataField="reIng 5" HeaderText="Ingredient # 5" SortExpression="reIng 5" />
                 <asp:BoundField DataField="rePrep" HeaderText="Preparation" SortExpression="rePrep" />
                 <asp:BoundField DataField="reNotes" HeaderText="Notes" SortExpression="reNotes" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             </Fields>
         </asp:DetailsView>
 

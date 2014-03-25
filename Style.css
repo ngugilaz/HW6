@@ -1,4 +1,8 @@
-﻿body {
+﻿body {background-color:#D2B48C;
+}
+h1 {text-align:center; font-weight:bold;
+}
+h2 {text-align:center;
 }
 .deletedrecipehighlight {color:pink;font-style:italic;font-weight:bold;text-decoration:underline;
 }
