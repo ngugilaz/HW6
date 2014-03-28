@@ -11,7 +11,12 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CS-recipeWebsite %>" SelectCommand="SELECT * FROM [recipe] WHERE ([reId] = @reId)" DeleteCommand="DELETE FROM [recipe] WHERE [reId] = @reId" InsertCommand="INSERT INTO [recipe] ([reName], [reSubmit], [reIng 1], [reIng 2], [reIng 3], [reIng 4], [reIng 5], [rePrep], [reNotes]) VALUES (@reName, @reSubmit, @reIng_1, @reIng_2, @reIng_3, @reIng_4, @reIng_5, @rePrep, @reNotes)" UpdateCommand="UPDATE [recipe] SET [reName] = @reName, [reSubmit] = @reSubmit, [reIng 1] = @reIng_1, [reIng 2] = @reIng_2, [reIng 3] = @reIng_3, [reIng 4] = @reIng_4, [reIng 5] = @reIng_5, [rePrep] = @rePrep, [reNotes] = @reNotes WHERE [reId] = @reId">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:CS-recipeWebsite %>" 
+            SelectCommand="SELECT * FROM [recipe] WHERE ([reId] = @reId)"
+             DeleteCommand="DELETE FROM [recipe] WHERE [reId] = @reId"
+             InsertCommand="INSERT INTO [recipe] ([reName], [reSubmit], [reIng 1], [reIng 2], [reIng 3], [reIng 4], [reIng 5], [rePrep], [reNotes]) VALUES (@reName, @reSubmit, @reIng_1, @reIng_2, @reIng_3, @reIng_4, @reIng_5, @rePrep, @reNotes)"
+             UpdateCommand="UPDATE [recipe] SET [reName] = @reName, [reSubmit] = @reSubmit, [reIng 1] = @reIng_1, [reIng 2] = @reIng_2, [reIng 3] = @reIng_3, [reIng 4] = @reIng_4, [reIng 5] = @reIng_5, [rePrep] = @rePrep, [reNotes] = @reNotes WHERE [reId] = @reId">
             <DeleteParameters>
                 <asp:Parameter Name="reId" Type="Int32" />
             </DeleteParameters>
@@ -27,7 +32,7 @@
                 <asp:Parameter Name="reNotes" Type="String" />
             </InsertParameters>
             <SelectParameters>
-                <asp:QueryStringParameter Name="reId" QueryStringField="reID" Type="Int32" />
+                <asp:QueryStringParameter Name="reId" QueryStringField="reId" Type="Int32" />
             </SelectParameters>
             <UpdateParameters>
                 <asp:Parameter Name="reName" Type="String" />
@@ -43,14 +48,42 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
-         <a href="default.aspx">HOME</a> 
-        <br />
-        <a href="Recipes.aspx">View All Recipes</a>
-        <br />
-         <a href="NewRecipe.aspx">Add a new recipe</a> 
-        <br />
-       
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="reId" DataSourceID="SqlDataSource1" Height="50px" Width="392px">
+        <div id="container">
+             <div id="Header">
+                <h1>Wicked Easy Recipes</h1>
+                 <p>Using 5 Ingredients or Less!</p> 
+             </div>
+                <div id="menu">
+                     <a href="default.aspx">Home</a>
+                    <a href="NewRecipe.aspx">New Recipe</a>
+                     <a href="aboutus.aspx">About Us</a>
+                    <a href="contacts.aspx">Contact</a>
+               </div>
+                <br />
+                <div id="contents">
+        
+               <asp:DetailsView ID="DetailsView1"
+                                runat="server" 
+                                AutoGenerateRows="False" 
+                                DataKeyNames="reId" 
+                                DataSourceID="SqlDataSource1"
+                                Height="50px"
+                                Width="392px"
+                                Grindline="none"
+                                CssClass="cssgridview" 
+                                HeaderStyle-CssClass="header"
+                                FieldHeaderStyle-CssClass="fieldheader"
+                                ItemStyle-CssClass="item"
+                                AlternatingRowStyle-CssClass="altrow"
+                                CommandRowStyle-CssClass="command"
+                                PagerStyle-CssClass="pager">                                              
+                   
+<AlternatingRowStyle CssClass="altrow"></AlternatingRowStyle>
+
+<CommandRowStyle CssClass="command"></CommandRowStyle>
+
+<FieldHeaderStyle CssClass="fieldheader"></FieldHeaderStyle>
+                   
             <Fields>
                 <asp:BoundField DataField="reName" HeaderText="Recipe Name" SortExpression="reName" />
                 <asp:BoundField DataField="reSubmit" HeaderText="Submitted By" SortExpression="reSubmit" />
@@ -61,11 +94,17 @@
                 <asp:BoundField DataField="reIng 5" HeaderText="Ingredient # 5" SortExpression="reIng 5" />
                 <asp:BoundField DataField="rePrep" HeaderText="Preparation" SortExpression="rePrep" />
                 <asp:BoundField DataField="reNotes" HeaderText="Notes" SortExpression="reNotes" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
-            </Fields>
-        </asp:DetailsView>
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                 </Fields>
 
-       
+<HeaderStyle CssClass="header"></HeaderStyle>
+
+<PagerStyle CssClass="pager"></PagerStyle>
+                 </asp:DetailsView>
+             </div>
+            <div id="footer"> &copy; 2014. 6K:183 Software Design & Development  </div> 
+            </div>
+        
     </div>
        
     </form>

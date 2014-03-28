@@ -13,7 +13,7 @@ Partial Class detailsView
     End Sub
 
     Protected Sub DetailsView1_ItemUpdated(sender As Object, e As DetailsViewUpdatedEventArgs) Handles DetailsView1.ItemUpdated
-        Response.Redirect("./recipe.aspx")
+        Response.Redirect("./Recipes.aspx")
 
     End Sub
 

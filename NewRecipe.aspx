@@ -43,11 +43,29 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
-         <a href="default.aspx">HOME</a>
+        <div id="container">
+             <div id="Header">
+                <h1>Wicked Easy Recipes</h1>
+                <p>Using 5 Ingredients or Less!</p> 
+             </div>
+                <div id="menu">
+                    <a href="default.aspx">Home</a>
+                    <a href="NewRecipe.aspx"> New Recipe</a>
+                    <a href="aboutus.aspx">About Us</a>
+                    <a href="contacts.aspx">Contact</a>
+               </div>
+                <br />
+                <div id="contents">
+        
         <br />
-         <a href="Recipes.aspx">View all Recipes</a>
-        <br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="reId" DataSourceID="SqlDataSource1" Height="50px" Width="392px">
+        <asp:DetailsView ID="DetailsView1"
+                         runat="server" 
+                         AutoGenerateRows="False"
+                         DataKeyNames="reId" 
+                         DataSourceID="SqlDataSource1"
+                         Height="50px"
+                         Grindlines="none"
+                         CssClass="cssgridview" DefaultMode="Insert">
             <Fields>
                 <asp:BoundField DataField="reName" HeaderText="Recipe Name" SortExpression="reName" />
                 <asp:BoundField DataField="reSubmit" HeaderText="Submitted By" SortExpression="reSubmit" />
@@ -63,8 +81,10 @@
         </asp:DetailsView>
         <br />
 
-   
-        <br />
+        </div>
+             <div id="footer"> &copy; 2014. 6K:183 Software Design & Development  </div> 
+        </div>      
+       
     </div>
     </form>
 </body>

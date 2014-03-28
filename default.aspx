@@ -14,23 +14,36 @@
 
     <div>
 
-        <div> id="Container">
-             <div>
+        <div id="container">
+             <div id="Header">
                 <h1>Wicked Easy Recipes</h1>
-                <h2> Using 5 Ingredients or Less!</h2>
+                <p>Using 5 Ingredients or Less!</p> 
              </div>
-                <div>
+                <div id="menu">
+                    <a href="default.aspx">Home</a>
                     <a href="./Recipes.aspx"> View all Recipes</a>
-                    <a href="./NewRecipe.aspx">Add a new recipe</a>
-                    <a href="">About Us</a>
-                    <a href="">Contact</a>
+                    <a href="./NewRecipe.aspx">New Recipe</a>
+                    <a href="./aboutus.aspx">About Us</a>
+                    <a href="./contacts.aspx">Contact</a>
                </div>
                 <br />
+            <br />
+
+            <div id="image">
+                
+            <img alt="Fruit" title="Fruit" src="./images/fruit.png" />
+
+
+            </div>
+
+            <br />
+            <br />
+
                 <div id="contents">
 
                 </div>
 
-                <div id="footer"> Footer </div>       
+                <div id="footer"> &copy; 2014. 6K:183 Software Design & Development </div>       
            </div>
     </div>
     </form>
